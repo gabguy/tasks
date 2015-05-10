@@ -5,7 +5,7 @@ var express = require('express'),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser');
 
-var database = mongoose.connect('mongodb://localhost/NodeBookAPI');
+var database = mongoose.connect('mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/');
 
 var Book = require('./models/bookModel');
 
